@@ -6,13 +6,13 @@
 * [1.2 DHCP server ảo](#dhcpao)
 * [1.3 Các chế độ card mạng trên vmware](#typeofnic)
 	
-[2. Thiết lập IP ](#ip)
+[2. Thiết lập IP trong ubuntu server](#ip)
 * [2.1 Thiết lập IP bằng câu lệnh.](#sualenh)
 * [2.2 Thiết lập IP bằng câu lệnh.](#suafile)
 
 [3. Thêm card mạng trong vmware](#themcardmang)
 * [3.1 Thêm 2 card mạng](#them2cardmang)
-* [3.2 Cấu hình 2 card mạng](#cauhinh2cardmang)
+* [3.2 Cấu hình 2 card mạng trên ubuntu server](#cauhinh2cardmang)
 
 <a name="cardmang"></a>
 #1. Card mạng trong VMware
@@ -51,7 +51,7 @@
 	Ở chế độ này máy ảo không có kết nối internet. IP của máy ảo được cấp bởi DHCP của VMnet tương ứng.Trong nhiều trường hợp đặc biệt cần cấu hình riêng, ta có thể tắt DHCP trên VMnet và cấu hình IP bằng tay cho máy ảo.
 
 <a name="ip"></a>
-#2. Thiết lập địa chỉ IP
+#2. Thiết lập địa chỉ IP trong ubuntu server
 * Xem tất cả thông tin về card mạng
 ```sh
 # ifconfig -a
@@ -167,5 +167,5 @@ Thực hiện theo các bước để thêm card mạng
 ![](http://i.imgur.com/Ol8Htcq.png)
 
 <a name="cauhinh2cardmang"></a>
-##3.2 Cấu hình 2 card mạng
+##3.2 Cấu hình 2 card mạng trên ubuntu server
 ![](http://prntscr.com/arthk4)
