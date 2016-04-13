@@ -13,6 +13,7 @@
 [3. Thêm card mạng trong vmware](#themcardmang)
 * [3.1 Thêm 2 card mạng](#them2cardmang)
 * [3.2 Cấu hình 2 card mạng](#cauhinh2cardmang)
+
 <a name="cardmang"></a>
 #1. Card mạng trong VMware
 <a name="swao"></a>
