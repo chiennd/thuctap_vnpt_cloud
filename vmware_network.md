@@ -9,12 +9,14 @@
 [2. Thiết lập IP ](#ip)
 * [2.1 Thiết lập IP bằng câu lệnh.](#sualenh)
 * [2.2 Thiết lập IP bằng câu lệnh.](#suafile)
-* [2.3 Thêm 2 card mạng trên máy server](#themcardmang)
 
+[3. Thêm card mạng trong vmware](#themcardmang)
+* [3.1 Thêm 2 card mạng](#them2cardmang)
+* [3.2 Cấu hình 2 card mạng](#cauhinh2cardmang)
 <a name="cardmang"></a>
 #1. Card mạng trong VMware
 <a name="swao"></a>
-##1.1: Switch ảo (Virtual Switch):
+##1.1 Switch ảo (Virtual Switch):
 * Cũng giống như switch vật lý, một Virtual Switch kết nối các thành phần mạng ảo lại với nhau.
 
 * Những  switch ảo hay còn gọi là mạng ảo, chúng có tên là **VMnet0, VMnet1, VMnet2…** một số switch ảo được gắn vào mạng một cách mặc định.
@@ -27,7 +29,7 @@
 * Ta có thể thêm, bớt, chỉnh các option của VMnet bằng cách vào menu `Edit -> Virtual Network Editor`.
 
 <a name="dhcpao"></a>
-##1.2: DHCP server ảo (Dynamic Host Configuration):
+##1.2 DHCP server ảo (Dynamic Host Configuration):
 * Là  server ảo cung cấp địa chỉ IP cho các máy ảo trong việc kết nối máy ảo vào các Switch ảo không có tính năng `Bridged (VMnet0)`.
 
 * Ví dụ như DHCP ảo cấp đến các máy ảo có kết nối đến `Host-only` và `NAT`.
@@ -35,7 +37,7 @@
 * **LAN Segment:** Các card mạng của máy ảo có thể gắn kết với nhau thành từng LAN Segment. Không giống như VMnet, LAN Segment chỉ **kết nối các card ảo lại với nhau** mà **không có những tính năng như DHCP hoặc kết nối chung với một card mạng ảo** được tạo bên ngoài (các VMware Network Adapter VMnet được tạo bên ngoài máy thật).
 
 <a name="typeofnic"></a>
-##1.3: Các chế độ của card mạng trên máy ảo:
+##1.3 Các chế độ của card mạng trên máy ảo:
 
 * **Chế độ Bridge**: ở chế độ này thì card mạng trên máy ảo sẽ được gắn vào VMnet0 và VMnet0 này liên kết trực tiếp với card mạng vật lý. Ở chế độ này máy ảo sẽ kết nối internet thông qua lớp card mạng vật lý và có chung lớp mạng với card mạng vật lý.
 
@@ -152,13 +154,17 @@ dns-nameserver 8.8.8.8
 	
 <a name="themcardmang"></a>
 #3. Thêm 2 card mạng trên máy server
+<a name="them2cardmang"></a>
+##3.1 Thêm 2 card mạng trên máy server
 * Chọn máy cần thêm card mạng, vào phần setting của máy, ta có cửa sổ hiện ra.
 Thực hiện theo các bước để thêm card mạng
 
 ![](http://i.imgur.com/oSqSzTO.png)
 
-* Chọn kiểu card mạng và nhấn kết thúc.
+* Chọn kiểu card mạng và nhấn kết thúc (các kiểu card mạng đã được giới thiệu ở phần trên).
 
 ![](http://i.imgur.com/Ol8Htcq.png)
 
-* Các kiểu card mạng đã được giới thiệu ở phần trên.
+<a name="cauhinh2cardmang"></a>
+##3.2 Cấu hình 2 card mạng
+![](http://prntscr.com/arthk4)
