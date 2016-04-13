@@ -8,8 +8,8 @@
 	
 [2. Thiết lập IP ](#ip)
 * [2.1 Thiết lập IP bằng câu lệnh.](#sualenh)
-* [Thiết lập IP bằng câu lệnh.](#suafile)
-* [Thêm 2 card mạng trên máy server](#themcardmang)
+* [2.2 Thiết lập IP bằng câu lệnh.](#suafile)
+* [2.3 Thêm 2 card mạng trên máy server](#themcardmang)
 
 <a name="cardmang"></a>
 #1. Card mạng trong VMware
