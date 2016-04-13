@@ -1,6 +1,8 @@
 #Hướng dẫn cài đặt Ubuntu server 14.04 trên máy ảo vmware
 ##Mục lục
 [1. Giới thiệu về Ubuntu server] (#Gioithieu)
+[2. Hướng dẫn cài đặt Ubuntu server](#Caidat)
+
 
 <a name="Gioithieu"></a>
 #1. Giới thiệu về Ubuntu server
@@ -12,7 +14,7 @@
 
 * Ubuntu server là một phiên bản của ubuntu được sử dụng cho các server.
 
-
+<a name="Caidat"></a>
 #2. Hướng dẫn cài đặt Ubuntu server
 
 ###2.1 Chọn ngôn ngữ cho ubuntu.
