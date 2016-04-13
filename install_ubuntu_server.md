@@ -1,6 +1,7 @@
 #Hướng dẫn cài đặt Ubuntu server 14.04 trên máy ảo vmware
 ##Mục lục
 [1. Giới thiệu về Ubuntu server] (#Gioithieu)
+
 [2. Hướng dẫn cài đặt Ubuntu server](#Caidat)
 
 
