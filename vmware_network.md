@@ -168,4 +168,4 @@ Thực hiện theo các bước để thêm card mạng
 
 <a name="cauhinh2cardmang"></a>
 ##3.2 Cấu hình 2 card mạng trên ubuntu server
-![](http://prntscr.com/arthk4)
+![](http://image.prntscr.com/image/0b896d79f46c4b3d86fab4781dbb9485.png)
