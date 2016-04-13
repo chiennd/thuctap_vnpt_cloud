@@ -2,7 +2,6 @@
 
 #Mục lục
 [1. Giới thiệu về card mạng trong VMware](#cardmang)
-
 	* [1.1 Switch ảo](#swao)
 	
 	* [1.2 DHCP server ảo](#dhcpao)
@@ -10,7 +9,6 @@
 	* [1.3 Các chế độ card mạng trên vmware](#typeofnic)
 	
 [2. Thiết lập IP ](#ip)
-
 	* [2.1 Thiết lập IP bằng câu lệnh.](#sualenh)
 	
 	* [Thiết lập IP bằng câu lệnh.](#suafile)
@@ -24,7 +22,7 @@
 ##1.1: Switch ảo (Virtual Switch):
 * Cũng giống như switch vật lý, một Virtual Switch kết nối các thành phần mạng ảo lại với nhau.
 
-* Những  switch ảo hay còn gọi là mạng ảo, chúng có tên là *VMnet0, VMnet1, VMnet2…* một số switch ảo được gắn vào mạng một cách mặc định.
+* Những  switch ảo hay còn gọi là mạng ảo, chúng có tên là **VMnet0, VMnet1, VMnet2…** một số switch ảo được gắn vào mạng một cách mặc định.
 
 * Mặc định khi ta cài Wmware thì có sẵn 3 Switch ảo như sau: 
 	* VMnet0 chế độ Bridged (cầu nối)
@@ -39,7 +37,7 @@
 
 * Ví dụ như DHCP ảo cấp đến các máy ảo có kết nối đến `Host-only` và `NAT`.
 
-* **LAN Segment:** Các card mạng của máy ảo có thể gắn kết với nhau thành từng LAN Segment. Không giống như VMnet, LAN Segment chỉ *kết nối các card ảo lại với nhau* mà *không có những tính năng như DHCP hoặc kết nối chung với một card mạng ảo* được tạo bên ngoài (các VMware Network Adapter VMnet được tạo bên ngoài máy thật).
+* **LAN Segment:** Các card mạng của máy ảo có thể gắn kết với nhau thành từng LAN Segment. Không giống như VMnet, LAN Segment chỉ **kết nối các card ảo lại với nhau** mà **không có những tính năng như DHCP hoặc kết nối chung với một card mạng ảo** được tạo bên ngoài (các VMware Network Adapter VMnet được tạo bên ngoài máy thật).
 
 <a name="typeofnic"></a>
 ##1.3: Các chế độ của card mạng trên máy ảo:
