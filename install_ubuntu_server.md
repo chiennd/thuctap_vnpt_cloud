@@ -93,22 +93,12 @@ Nếu mạng của bạn phải sử dụng http proxy để có thể truy cậ
 ###2.16 Chọn các gói phần mềm sẽ được cài đặt cùng với ubuntu
 * ở đây có các gói như ssh server, dns server, mail server,.... 
 
-![](http://huongdanit.com/noidunghdit/uploads/2015/02/install_ubuntu_28.jpg)
+![](http://i.imgur.com/6ra1jJF.jpg)
 
 ###2.17 Cài đặt boot loader (GRUB) trên ổ đĩa
 ![](http://i.imgur.com/0mo1DOU.png)
 
 ###2.18 Kết thúc cài đặt.
 ![](http://i.imgur.com/kavUbyY.png)
+
 Nhận continues để khởi động lại máy
-
-
-
-
-
-
-
-
-
-
-
