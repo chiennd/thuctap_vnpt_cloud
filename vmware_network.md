@@ -1,5 +1,18 @@
-#1. Card mạng trong VMware
+# Card mạng trong vmware và linux
 
+#Mục lục
+[1. Giới thiệu về card mạng trong VMware](#cardmang)
+	* [1.1 Switch ảo](#swao)
+	* [1.2 DHCP server ảo](#dhcpao)
+	* [1.3 Các chế độ card mạng trên vmware](#typeofnic)
+[2. Thiết lập IP ](#ip)
+	* [2.1 Thiết lập IP bằng câu lệnh.](#sualenh)
+	* [Thiết lập IP bằng câu lệnh.](#suafile)
+	* [Thêm 2 card mạng trên máy server](#themcardmang)
+
+<a name="cardmang"></a>
+#1. Card mạng trong VMware
+<a name="swao"></a>
 ##1.1: Switch ảo (Virtual Switch):
 * Cũng giống như switch vật lý, một Virtual Switch kết nối các thành phần mạng ảo lại với nhau.
 
@@ -9,6 +22,7 @@
 
 * Ta có thể thêm, bớt, chỉnh các option của VMnet bằng cách vào menu Edit -> Virtual Network Editor.
 
+<a name="dhcpao"></a>
 ##1.2: DHCP server ảo (Dynamic Host Configuration):
 * Là  server ảo cung cấp địa chỉ IP cho các máy ảo trong việc kết nối máy ảo vào các Switch ảo không có tính năng Bridged (VMnet0).
 
@@ -16,6 +30,7 @@
 
 * **LAN Segment:** Các card mạng của máy ảo có thể gắn kết với nhau thành từng LAN Segment. Không giống như VMnet, LAN Segment chỉ kết nối các card ảo lại với nhau mà không có những tính năng như DHCP hoặc kết nối chung với một card mạng ảo được tạo bên ngoài (các VMware Network Adapter VMnet được tạo bên ngoài máy thật).
 
+<a name="typeofnic"></a>
 ##1.3: Các chế độ của card mạng trên máy ảo:
 
 * **Chế độ Bridge**: ở chế độ này thì card mạng trên máy ảo sẽ được gắn vào VMnet0 và VMnet0 này liên kết trực tiếp với card mạng vật lý. Ở chế độ này máy ảo sẽ kết nối internet thông qua lớp card mạng vật lý và có chung lớp mạng với card mạng vật lý.
@@ -28,7 +43,8 @@
 
 	Ở chế độ này máy ảo không có kết nối internet. IP của máy ảo được cấp bởi DHCP của VMnet tương ứng.Trong nhiều trường hợp đặc biệt cần cấu hình riêng, ta có thể tắt DHCP trên VMnet và cấu hình IP bằng tay cho máy ảo.
 
-#2. Thiết lập IP
+<a name="ip"></a>
+#2. Thiết lập địa chỉ IP
 * Xem tất cả thông tin về card mạng
 ```sh
 # ifconfig -a
@@ -64,7 +80,7 @@ lo        Link encap:Local Loopback
 
 ```
 
-
+<a name="sualenh"> </a>
 ##2.1 Thiết lập IP bằng câu lệnh. (Chỉ có giá trị tức thời, sẽ mất khi khởi động lại.)
 * Câu lệnh: 
 ```sh
@@ -75,7 +91,7 @@ lo        Link encap:Local Loopback
 	* `IP-address:` là địa chỉ ip cần gán.
 	* `subnet-mask:` là địa chỉ netmask.
 
-* Ví dụ: Đặt địa chỉ ip `10.145.25.210`, netmask là `255.255.255.0` cho card mạng eth0
+* Ví dụ: Đặt địa chỉ ip `10.145.25.210`, netmask là `255.255.255.0` cho card mạng `eth0`
 ```sh
 # ifconfig eth0 10.145.25.210 netmask 255.255.255.0
 ```
@@ -83,6 +99,7 @@ lo        Link encap:Local Loopback
 
 ![](http://i.imgur.com/MvNQjIp.png)
 
+<a name ="suafile"></a>
 ##2.2 Thiết lập bằng cách sửa file. (Có giá trị mãi mãi)
 * Thư mục chứa file cấu hình `/etc/network/interfaces/`
 * Nội dung file
@@ -129,13 +146,15 @@ dns-nameserver 8.8.8.8
 	* `broadcast`: địa chỉ quảng bá.
 	* `dns-nameserver`: địa chỉ dns server phân giải tên miền.
 	
-
-
-
+<a name="themcardmang"></a>
 #3. Thêm 2 card mạng trên máy server
 * Chọn máy cần thêm card mạng, vào phần setting của máy, ta có cửa sổ hiện ra.
 Thực hiện theo các bước để thêm card mạng
+
 ![](http://i.imgur.com/oSqSzTO.png)
+
 * Chọn kiểu card mạng và nhấn kết thúc.
+
 ![](http://i.imgur.com/Ol8Htcq.png)
+
 * Các kiểu card mạng đã được giới thiệu ở phần trên.
