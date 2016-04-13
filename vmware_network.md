@@ -3,16 +3,12 @@
 #Mục lục
 [1. Giới thiệu về card mạng trong VMware](#cardmang)
 	* [1.1 Switch ảo](#swao)
-	
 	* [1.2 DHCP server ảo](#dhcpao)
-	
 	* [1.3 Các chế độ card mạng trên vmware](#typeofnic)
 	
 [2. Thiết lập IP ](#ip)
 	* [2.1 Thiết lập IP bằng câu lệnh.](#sualenh)
-	
 	* [Thiết lập IP bằng câu lệnh.](#suafile)
-	
 	* [Thêm 2 card mạng trên máy server](#themcardmang)
 	
 
