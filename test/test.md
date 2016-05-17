@@ -142,24 +142,10 @@ sử dụng LDAP.
 ##3.5 use cases for idenity backend
 | identity source |    uses case|
 |:------:|:------:|
-|SQL| sử dụng cho testing hoặc developing.
-user nhỏ.
-openstack-specific accounts.|
-
-|LDAP| sử dụng nếu đã có trước.
-chỉ sử dụng mỗi LDAP nếu bạn có khả năng tạo dịch vụ
-tài khoản cần thiết trong LDAP.|
-
-|Multiple backend|
-trong môi trường doanh nghiệp.
-sử dụng nếu dịch vụ người dùng không được phép trong LDAP.|
-
-|idenity provider|
-bạn có thể tận dụng lợi thế của cơ chế Federated.
-sử dụng nếu indentity provider đã tồn tại.
-keystone không thể truy cập vào LDAP.
-Non-LDAP idenity source.
-sử dụng nếu LDAP tương tác đến underlying platform và web server.|
+|SQL| sử dụng cho testing hoặc developing. user nhỏ. openstack-specific accounts.|
+|LDAP| sử dụng nếu đã có trước. chỉ sử dụng mỗi LDAP nếu bạn có khả năng tạo dịch vụ tài khoản cần thiết trong LDAP.|
+|Multiple backend| trong môi trường doanh nghiệp. sử dụng nếu dịch vụ người dùng không được phép trong LDAP.|
+|idenity provider| bạn có thể tận dụng lợi thế của cơ chế Federated. sử dụng nếu indentity provider đã tồn tại. Keystone không thể truy cập vào LDAP. Non-LDAP idenity source. sử dụng nếu LDAP tương tác đến underlying platform và web server.|
 
 ##3.6. Authentication
 ###3.6.1 Authentication password
