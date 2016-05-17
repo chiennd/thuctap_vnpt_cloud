@@ -53,6 +53,7 @@ cloud.
 * Tiền thân của Projects là tenants, thay đổi để trực quan hơn.
 * Projects không phải là chủ user nhưng user và group có quyền truy cập vào các project, sử dụng các role.
 * Các role trên user và group chỉ ra rằng họ có quyền gì để truy cập vào các tài nguyên trong Projects.
+
 ##2.2 Domain
 * Là khái niệm vừa ra đời ở api v3.
 * Không có cơ chế để hạn chế tầm nhìn của project trên các tổ chức khau nhau -> dẫn đến va chạm giữa tên project của các tổ chức khác nhau. username cũng có thể va chạm giữa 2 tổ chức.
@@ -60,13 +61,18 @@ cloud.
 * Dùng để cô lạp tầm nhìn, tập hợp các project, user cho 1 tổ chức cụ thể.
 * 1 domain có thể bao gồm user, group, project....
 * Domain cho phép bạn phân chia các nguồn tài nguyên trong cloud vào các tổ chức cụ thể.
+
 ##2.3 Users và Groups
 * Mối quan hệ giữa user group và domain.
+
 ##2.4 Roles
 * Vai trò.
 * Mỗi user có thể có vai trò khác nhau đối với từng project.
+
 ##2.5 Assignment
+
 ##2.6 Targets
+
 ##2.7 Token
 * Người dùng muốn sử dụng OpenStack API thì cần phải chứng minh mình là ai, và mình nên đưuọc cho phép trong câu hỏi API.
 * Cách mà họ lưu trữ là gửi token đến API call và Keystone phản ứng để sinh ra token.
