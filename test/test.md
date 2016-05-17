@@ -138,6 +138,7 @@ sử dụng LDAP.
 
 ##3.4 idenity provider
 * Sử dụng các giải pháp thứ ba để có thể xác thực.
+
 ##3.5 use cases for idenity backend
 | identity source |    uses case|
 |:------:|:------:|
