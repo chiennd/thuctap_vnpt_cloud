@@ -73,7 +73,7 @@ cloud.
 * Là khái niệm vừa ra đời ở api v3.
 * Không có cơ chế để hạn chế tầm nhìn của project trên các tổ chức khau nhau -> dẫn đến va chạm giữa tên project của các tổ chức khác nhau. username cũng có thể va chạm giữa 2 tổ chức.
 * Keystone ra khái nhiệm trừu tượng mới: domain.
-* Dùng để cô lạp tầm nhìn, tập hợp các project, user cho 1 tổ chức cụ thể.
+* Dùng để cô lập tầm nhìn, tập hợp các project, user cho 1 tổ chức cụ thể.
 * 1 domain có thể bao gồm user, group, project....
 * Domain cho phép bạn phân chia các nguồn tài nguyên trong cloud vào các tổ chức cụ thể.
 
@@ -101,10 +101,12 @@ cloud.
 
 <a href="assignment"></a>
 ##2.5 Assignment
+* Thể hiện sự kết nối giữa một actor(user và user group) với một actor(domain, project) và một role.
+* Role assignment được cấp phát và thu hồi, và có thể được kế thừa giữa các user và group trên project của domains. 
 
 <a href="targets"></a>
 ##2.6 Targets
-
+* Nơi mà role được gán cho user (Project hoặc domain).
 <a href="token"></a>
 ##2.7 Token
 * Người dùng muốn sử dụng OpenStack API thì cần phải chứng minh mình là ai, và mình nên đưuọc cho phép trong câu hỏi API.
@@ -268,7 +270,7 @@ gAAAAABU7roWGiCuOvgFcckec-0ytpGnMZDBLG9hA7Hr9qfvdZDHjsak39YN98HXxoYLIqVm19Egku5Y
 S7waA306jyKNhHwUnpsBQ%3D
 ```
 
-
+* Bảng so sánh các loại token
 
 |Token Types | UUID | PKI | PKIZ | Fernet|
 |:----------:|:----:|:---:|:----:|:-----:|
