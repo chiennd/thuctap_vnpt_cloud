@@ -255,21 +255,21 @@ sử dụng LDAP.
 
 ![](http://i.imgur.com/ZAK7w99.png)
 
-<a href="Access_Management_and_Authorization"></a>
+<a name="Access_Management_and_Authorization"></a>
 ##3.3. Access Management and Authorization
 * Keystone tạo ra policy Role-Based Access Controll (RBAC) được thực thi trên mỗi API public endpoint. Những chính sách này được lưu thành 1 file trên đĩa, có tên là policy.json
 
-<a href="backend_services"></a>
+<a name="backend_services"></a>
 ##3.4 Backends and Services
 xanh: thường SQL
 tím: LDAP hoặc SQL.
 Xanh da trời: SQL hoặc Memcache.
 policy: lưu ở file.
 
-<a href="token"></a>
+<a name="token"></a>
 #4. Token format
 
-<a href="uuid"></a>
+<a name="uuid"></a>
 ##4.1 UUID:
 * Có độ dài 32 byte, nhỏ, dễ sử dụng, không nén.
 * Không mang theo đủ thông tin, do đó luôn phải gửi lại keystone để xác thực hoạt động ủy quyền => thắt nút cổ chai.
@@ -280,7 +280,7 @@ policy: lưu ở file.
 ```sh
 468da447bd1c4821bbc5def0498fd441
 ```
-<a href="pki"></a>
+<a name="pki"></a>
 <a name="pki"></a>
 ##4.2 PKI:
 * Mã hóa bằng Private Key, kết hợp Public key để giải mã, lấy thông tin.
@@ -299,14 +299,14 @@ MIIDsAYCCAokGCSqGSIb3DQEHAaCCAnoEggJ2ew0KICAgICJhY2QogICAgICAgI...EBMFwwVzELMAkG
 EOMAwGA1UEChM7r0iosFscpnfCuc8jGMobyfApz/dZqJnsk4lt1ahlNTpXQeVFxNK/ydKL+tzEjg
 ```
 <a name="pkiz"></a>
-<a href="pkiz"></a>
+<a name="pkiz"></a>
 ##4.3 PKIZ:
 * Tương tự PKI.
 * Khắc phục nhược điểm của PKI, token sẽ được nén lại để có thể truyền qua HTTP.
 * Tuy nhiên, token dạng này vẫn có kích thước lớn.
 
 <a name="fernet"></a>
-<a href="fernet"></a>
+<a name="fernet"></a>
 ##4.4 Fernet: 
 * Sử dụng mã hóa đối xưng (Sử dụng chung key để mã hóa và giải mã).
 * Có kích thước khoảng 255 byte, không nén, lớn hơn UUID và nhỏ hơn PKI.
@@ -452,7 +452,7 @@ Given a key and message, generate a fernet token with the following steps, in or
 * 10: Nova trả lời cho người dùng.
 
 <a name="tham_khao"></a>
-#8Tài liệu tham khảo
+#8. Tài liệu tham khảo
 * *Steve Martinelli, Henry Nash & Brad Topol*: Identity, Authentication & Access Management in OpenStack
 * http://www.slideshare.net/openstackindia/openstack-keystone-identity-service
 * https://github.com/fernet/spec/blob/master/Spec.md
