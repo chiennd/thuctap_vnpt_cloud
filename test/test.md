@@ -53,7 +53,7 @@ cloud.
 
 <a href="khai_niem"></a>
 #2 Các khái nhiệm cơ bản.
-<A<a href="projects"></a>
+<a href="projects"></a>
 ##2.1 Projects
 * Trong keystone, projects là khái niệm trừu tượng, sử dụng bởi các dịch vụ khác trong OpenStack.
 * Projects có chứa các tài nguyên.
@@ -377,7 +377,13 @@ Given a key and message, generate a fernet token with the following steps, in or
 
 <a name="backend"></a>
 
-#6. Cách hoạt động của Keystone
+#5. LDAP
+
+
+#6. Federated Identity
+
+
+#7. Cách hoạt động của Keystone
 
 ![](http://i.imgur.com/uDzPLna.png)
 
@@ -392,7 +398,13 @@ Given a key and message, generate a fernet token with the following steps, in or
 * 9: Neutron trả lời cho Nova..
 * 10: Nova trả lời cho người dùng.
 
-
+<a name="tham_khao"></a>
+#8Tài liệu tham khảo
+* *Steve Martinelli, Henry Nash & Brad Topol*: Identity, Authentication & Access Management in OpenStack
+* http://www.slideshare.net/openstackindia/openstack-keystone-identity-service
+* https://github.com/fernet/spec/blob/master/Spec.md
+* https://developer.ibm.com/opentech/2015/11/11/deep-dive-keystone-fernet-tokens/
+* http://www.openstack.cn/?p=5120
 
 
 
